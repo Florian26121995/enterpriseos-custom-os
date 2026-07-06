@@ -15,9 +15,10 @@ modules:
       - niri
       - yazi
       - ghostty
+      - greetd
       - greetd-selinux
-      - greetd-regreet
-      - xorg-xwayland
+      - tuigreet
+      - xwayland-satellite
       - xdg-desktop-portal-gtk
       - xdg-desktop-portal-gnome
       - terra-release
