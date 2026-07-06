@@ -5,6 +5,8 @@ image-version: latest
 modules:
   - type: akmods
     nvidia-driver: nvidia-open
+    install:
+      - v4l2loopback
   - type: rpm-ostree
     repos:
       - copr:scottames/ghostty
