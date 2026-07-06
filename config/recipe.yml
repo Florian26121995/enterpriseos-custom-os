@@ -1,0 +1,22 @@
+name: flori-custom-desktop
+description: Minimalistisches Gaming- und Bastel-System mit Niri, Yazi und Ghostty
+base: fedora-atomic-nvidia:latest
+
+modules:
+  - type: rpm-ostree
+    repos:
+      - copr:pgdev/ghostty
+    install:
+      - niri          
+      - vibepanel     
+      - yazi          
+      - ghostty       
+      - greetd-selinux 
+      - greetd-regreet 
+      - xorg-xwayland 
+      - polkit-gnome  
+
+  - type: default-flatpaks
+    system:
+      - com.valvesoftware.Steam
+      - com.discordapp.Discord
