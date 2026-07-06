@@ -1,3 +1,7 @@
+name: flori-custom-desktop
+description: Minimalistisches Gaming- und Bastel-System mit Niri, Yazi und Ghostty
+base-image: ghcr.io/ublue-os/base-main
+image-version: latest
 modules:
   - type: akmods
     nvidia-driver: nvidia-open
@@ -14,7 +18,8 @@ modules:
       - greetd-selinux
       - greetd-regreet
       - xorg-xwayland
-      - polkit-gnome
+      - xdg-desktop-portal-gtk
+      - xdg-desktop-portal-gnome
       - terra-release
       - noctalia-shell
   - type: default-flatpaks
