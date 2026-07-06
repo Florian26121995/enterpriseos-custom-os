@@ -1,11 +1,13 @@
 name: flori-custom-desktop
 description: Minimalistisches Gaming- und Bastel-System mit Niri, Yazi und Ghostty
-base-image: ghcr.io/ublue-os/nvidia
-image-version: 44
+base-image: ghcr.io/ublue-os/base-main
+image-version: latest
 modules:
+  - type: akmods
+    nvidia-driver: nvidia-open
   - type: rpm-ostree
     repos:
-      - copr:pgdev/ghostty
+      - copr:scottames/ghostty
     install:
       - niri
       - vibepanel
