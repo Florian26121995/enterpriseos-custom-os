@@ -16,7 +16,6 @@ modules:
       - greetd-regreet
       - xorg-xwayland
       - polkit-gnome
-
 - type: default-flatpaks
     configurations:
       - scope: system
