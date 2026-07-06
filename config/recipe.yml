@@ -18,6 +18,6 @@ modules:
       - polkit-gnome  
 
   - type: flatpak
-    flatpaks:
+    install:
       - com.valvesoftware.Steam
       - com.discordapp.Discord
