@@ -1,6 +1,7 @@
 name: flori-custom-desktop
 description: Minimalistisches Gaming- und Bastel-System mit Niri, Yazi und Ghostty
-base: fedora-atomic-nvidia:latest
+base-image: ghcr.io/ublue-os/nvidia
+image-version: 44
 
 modules:
   - type: rpm-ostree
@@ -16,7 +17,7 @@ modules:
       - xorg-xwayland 
       - polkit-gnome  
 
-  - type: default-flatpaks
-    system:
+  - type: flatpak
+    flatpaks:
       - com.valvesoftware.Steam
       - com.discordapp.Discord
