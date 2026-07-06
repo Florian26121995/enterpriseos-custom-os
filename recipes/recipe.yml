@@ -17,7 +17,9 @@ modules:
       - xorg-xwayland
       - polkit-gnome
 
-  - type: flatpak
-    install:
-      - com.valvesoftware.Steam
-      - com.discordapp.Discord
+- type: default-flatpaks
+    configurations:
+      - scope: system
+        install:
+          - com.valvesoftware.Steam
+          - com.discordapp.Discord
