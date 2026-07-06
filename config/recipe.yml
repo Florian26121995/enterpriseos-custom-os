@@ -1,24 +1,22 @@
-name: flori-custom-desktop
-description: Minimalistisches Gaming- und Bastel-System mit Niri, Yazi und Ghostty
-base-image: ghcr.io/ublue-os/base-main
-image-version: latest
 modules:
   - type: akmods
     nvidia-driver: nvidia-open
-    install:
-      - v4l2loopback
+    install: []
   - type: rpm-ostree
     repos:
+      - copr:yalter/niri
       - copr:scottames/ghostty
+      - https://raw.githubusercontent.com/terrapkg/subatomic-repos/main/terra.repo
     install:
       - niri
-      - vibepanel
       - yazi
       - ghostty
       - greetd-selinux
       - greetd-regreet
       - xorg-xwayland
       - polkit-gnome
+      - terra-release
+      - noctalia-shell
   - type: default-flatpaks
     configurations:
       - scope: system
