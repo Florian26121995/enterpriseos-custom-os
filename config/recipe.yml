@@ -2,21 +2,20 @@ name: flori-custom-desktop
 description: Minimalistisches Gaming- und Bastel-System mit Niri, Yazi und Ghostty
 base-image: ghcr.io/ublue-os/nvidia
 image-version: 44
-
 modules:
   - type: rpm-ostree
     repos:
       - copr:pgdev/ghostty
     install:
-      - niri          
-      - vibepanel     
-      - yazi          
-      - ghostty       
-      - greetd-selinux 
-      - greetd-regreet 
-      - xorg-xwayland 
-      - polkit-gnome  
-- type: default-flatpaks
+      - niri
+      - vibepanel
+      - yazi
+      - ghostty
+      - greetd-selinux
+      - greetd-regreet
+      - xorg-xwayland
+      - polkit-gnome
+  - type: default-flatpaks
     configurations:
       - scope: system
         install:
