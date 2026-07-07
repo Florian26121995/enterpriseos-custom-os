@@ -26,6 +26,8 @@ modules:
   - type: files
     files:
       - usr: /usr
+      - source: system
+        destination: /
   - type: script
     scripts:
       - build-sysusers-fix.sh
